@@ -23,4 +23,38 @@ DELETE http://localhost:8080/api/sweets/{id} (admin only)
 POST http://localhost:8080/api/sweets/{id}/purchase
 POST http://localhost:8080/api/sweets/{id}/restock (Admin only)
 
+                                              **React + Vite FrontEnd**
+
+Sweet Shop – Frontend
+
+A modern, responsive React single-page application (SPA) for the Sweet Shop Management System, built using React + Vite + Bootstrap, and integrated with a Spring Boot backend secured with JWT authentication.
+
+This frontend allows users to browse, search, and purchase sweets, while admin users can manage sweets and inventory.
+
+**Tech Stack**
+React (Vite)
+JavaScript (ES6+)
+React Router DOM
+Axios
+Bootstrap 5
+React Toastify
+JWT Decode
+**Authentication**
+User Registration
+User Login using JWT
+Token stored securely in localStorage
+Role-based UI rendering (USER / ADMIN)
+**User Features**
+View all available sweets
+Search sweets by:
+Name
+Category
+Price range
+Purchase sweets
+Purchase button disabled when stock is zero
+**Admin Features**
+Add new sweets
+Update sweet details
+Delete sweets
+Restock sweets
 
