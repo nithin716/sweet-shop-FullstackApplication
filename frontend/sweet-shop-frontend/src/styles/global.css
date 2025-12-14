@@ -1,0 +1,41 @@
+/* Global Reset */
+body {
+  background: linear-gradient(135deg, #fdfbfb, #ebedee);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+}
+
+/* Page container spacing */
+.container {
+  margin-top: 30px;
+}
+
+/* Headings */
+h2, h3, h4 {
+  font-weight: 600;
+  color: #333;
+}
+
+/* Buttons */
+.btn {
+  border-radius: 25px;
+  padding: 8px 18px;
+}
+
+/* Inputs */
+.form-control {
+  border-radius: 12px;
+  padding: 10px;
+}
+
+/* Card shadow */
+.card {
+  border-radius: 16px;
+  border: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
