@@ -1,16 +1,39 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Sweet Shop – Frontend
 
-Currently, two official plugins are available:
+A modern, responsive React single-page application (SPA) for the Sweet Shop Management System, built using React + Vite + Bootstrap, and integrated with a Spring Boot backend secured with JWT authentication.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This frontend allows users to browse, search, and purchase sweets, while admin users can manage sweets and inventory.
 
-## React Compiler
+**Tech Stack**
+React (Vite)
+JavaScript (ES6+)
+React Router DOM
+Axios
+Bootstrap 5
+React Toastify
+JWT Decode
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+**Features**
+**Authentication**
+User Registration
+User Login using JWT
+Token stored securely in localStorage
+Role-based UI rendering (USER / ADMIN)
+**User Features**
+View all available sweets
+Search sweets by:
+Name
+Category
+Price range
+Purchase sweets
+Purchase button disabled when stock is zero
+**Admin Features**
+Add new sweets
+Update sweet details
+Delete sweets
+Restock sweets
+**My AI Usage**
+i used chat.GPT for styling my frontend pages and also when i faced a issue with the getting token from frontend i used AI to clear that error .as i had all my backend API's, AI made easier me to make the frontend application.
+Admin dashboard visible only for ADMIN users
