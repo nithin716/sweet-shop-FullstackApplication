@@ -2,10 +2,14 @@ package com.nithin.auth.controller;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import com.nithin.auth.dto.AuthResponse;
 import com.nithin.auth.dto.LoginRequest;
+import com.nithin.auth.dto.RegisterRequest;
 import com.nithin.auth.service.AuthService;
 import com.nithin.user.entity.User;
 
@@ -21,10 +25,13 @@ public class AuthController {
 
     @PostMapping("/register")
     public ResponseEntity<User> register(
-            @RequestParam String email,
-            @RequestParam String password) {
+            @RequestBody RegisterRequest request) {
 
-        User user = authService.register(email, password);
+        User user = authService.register(
+            request.getEmail(),
+            request.getPassword()
+        );
+
         return new ResponseEntity<>(user, HttpStatus.CREATED);
     }
 
