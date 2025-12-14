@@ -12,7 +12,6 @@ function AdminDashboard() {
     quantity: "",
   });
 
-  // Load sweets
   const loadSweets = async () => {
     const res = await api.get("/sweets");
     setSweets(res.data);
@@ -22,7 +21,6 @@ function AdminDashboard() {
     loadSweets();
   }, []);
 
-  // Add or Update Sweet
   const submitSweet = async (e) => {
     e.preventDefault();
 
@@ -44,7 +42,6 @@ function AdminDashboard() {
     loadSweets();
   };
 
-  // Edit Sweet
   const editSweet = (sweet) => {
     setEditId(sweet.id);
     setForm({
@@ -55,14 +52,12 @@ function AdminDashboard() {
     });
   };
 
-  // Delete Sweet
   const deleteSweet = async (id) => {
     if (!window.confirm("Delete this sweet?")) return;
     await api.delete(`/sweets/${id}`);
     loadSweets();
   };
 
-  // Restock Sweet
   const restockSweet = async (id) => {
     const qty = prompt("Enter restock quantity:");
     if (!qty) return;
@@ -75,7 +70,6 @@ function AdminDashboard() {
     <div className="container mt-4">
       <h2 className="mb-3">Admin Dashboard</h2>
 
-      {/* Add / Update Form */}
       <form onSubmit={submitSweet} className="mb-4">
         <h5>{editId ? "Update Sweet" : "Add Sweet"}</h5>
 
@@ -141,7 +135,6 @@ function AdminDashboard() {
         )}
       </form>
 
-      {/* Sweet List */}
       <table className="table table-bordered">
         <thead className="table-dark">
           <tr>

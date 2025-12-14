@@ -24,7 +24,6 @@ function Login() {
       const token = response.data.token;
       const decoded = jwtDecode(token);
 
-      // ✅ Update global auth state
       login(token, decoded.role);
 
       toast.success("Login successful 🎉");
@@ -79,7 +78,6 @@ function Login() {
         </p>
       </div>
 
-      {/* Inline styles (no extra CSS file needed) */}
       <style>{`
         .auth-bg {
           min-height: 100vh;

@@ -12,7 +12,6 @@ function Navbar() {
 
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm px-4 py-3">
-      {/* Brand */}
       <Link className="navbar-brand d-flex align-items-center" to="/">
         <span className="fs-4 me-2">🍬</span>
         <div className="d-flex flex-column lh-sm">
@@ -21,7 +20,6 @@ function Navbar() {
         </div>
       </Link>
 
-      {/* Right Side */}
       <div className="ms-auto d-flex align-items-center gap-2">
         {isAuthenticated && (
           <Link className="nav-pill" to="/">
@@ -61,7 +59,6 @@ function Navbar() {
         )}
       </div>
 
-      {/* Inline CSS for polish */}
       <style>{`
         .nav-pill {
           padding: 6px 14px;

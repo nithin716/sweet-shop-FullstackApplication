@@ -11,7 +11,6 @@ import { useAuth } from "./context/AuthContext";
 function App() {
   const { isAuthenticated, loading } = useAuth();
 
-  // ⏳ Wait until auth state is loaded from localStorage
   if (loading) {
     return (
       <div className="text-center mt-5">
@@ -40,7 +39,6 @@ function App() {
           }
         />
 
-        {/* Auth routes */}
         <Route
           path="/login"
           element={
@@ -54,7 +52,6 @@ function App() {
           }
         />
 
-        {/* Admin route */}
         <Route
           path="/admin"
           element={

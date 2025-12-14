@@ -66,7 +66,6 @@ function Home() {
 
   return (
     <>
-      {/* 🔥 HERO SECTION */}
       <div
         style={{
           backgroundImage: `linear-gradient(
@@ -98,14 +97,12 @@ function Home() {
         </div>
       </div>
 
-      {/* 🔵 LIGHT BLUE BACKGROUND SECTION */}
       <div style={{ backgroundColor: "#f1f7ff" }}>
         <div className="container my-5 py-4">
           <h2 className="text-center fw-bold mb-4">
             🍬 Available Sweets
           </h2>
 
-          {/* Filters */}
           <div className="card shadow-sm mb-4">
             <div className="card-body">
               <h5 className="card-title mb-3">Search & Filters</h5>
@@ -158,7 +155,6 @@ function Home() {
             </div>
           </div>
 
-          {/* Loading */}
           {loading && (
             <div className="text-center my-5">
               <div className="spinner-border text-primary"></div>
@@ -166,14 +162,12 @@ function Home() {
             </div>
           )}
 
-          {/* Error */}
           {error && (
             <div className="alert alert-danger text-center">
               {error}
             </div>
           )}
 
-          {/* Cards */}
           <div className="row">
             {!loading && sweets.length === 0 && (
               <p className="text-center text-muted">

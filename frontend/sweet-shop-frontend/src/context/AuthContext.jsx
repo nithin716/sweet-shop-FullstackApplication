@@ -7,7 +7,6 @@ export const AuthProvider = ({ children }) => {
   const [role, setRole] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  // ✅ Run once on app load
   useEffect(() => {
     const token = localStorage.getItem("token");
     const storedRole = localStorage.getItem("role");
@@ -23,7 +22,6 @@ export const AuthProvider = ({ children }) => {
     setLoading(false);
   }, []);
 
-  // ✅ Login updates context immediately (NO refresh needed)
   const login = (token, role) => {
     localStorage.setItem("token", token);
     localStorage.setItem("role", role);
@@ -31,7 +29,6 @@ export const AuthProvider = ({ children }) => {
     setRole(role);
   };
 
-  // ✅ Logout clears everything properly
   const logout = () => {
     localStorage.removeItem("token");
     localStorage.removeItem("role");
